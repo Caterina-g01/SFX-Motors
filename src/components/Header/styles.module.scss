@@ -1,0 +1,41 @@
+.header__container {
+	width: 100%;
+	height: 141px;
+	background-color: #212121;
+	@include fontTitle1();
+}
+
+.header__logo {
+	height: 15vw;
+}
+
+.header__nav {
+	max-width: 1680px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 3vw;
+	height: 141px;
+	justify-content: center;
+}
+
+.header__navList {
+	display: flex;
+	height: 141px;
+	flex-wrap: nowrap;
+	gap: 3vw;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.header__navSocialList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+}
+
+.header__navSocialListItem {
+	width: 30px;
+}
