@@ -1,6 +1,7 @@
 .sliderImg {
 	width: 100%;
-	height: 800px;
+	height: 100%;
+
  }
  
  .sliderContainer {
@@ -8,11 +9,13 @@
 	margin: 0 auto;
 	position: relative;
 	margin-bottom: 100px;
+	overflow: hidden;
+	
  }
  
  .progressBarContainer {
 	position: absolute;
-	bottom: 0;
+	bottom: 5px;
 	left: 50%;
 	width: 100%;
 	height: 5px;
@@ -22,11 +25,57 @@
  
  .progressBar {
 	height: 100%;
-	background-color: rgb(255, 0, 0);
+	background-color: rgb(189, 0, 0);
 	transform-origin: center;
 	transition: transform 0.1s linear;
  }
  
  .slide:focus {
 	outline: none; 
+ }
+
+ .nextArrow,
+ .prevArrow {
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 2;
+ }
+ 
+ .nextArrow {
+	right: 24px;
+ }
+ 
+ .prevArrow {
+	left: 6px;
+ }
+ 
+ .arrowImg {
+	width: 40px; 
+	height: auto; 
+ }
+ 
+ .slick-prev,
+ .slick-next {
+	display: none !important;
+ }
+
+ .arrowLeft__background {
+	position: absolute;
+	width: 7vw;
+	height: 100%;
+	top: -5px;
+	left: 0;
+	background: linear-gradient(to right, rgb(27, 26, 26), rgba(0, 0, 0, 0)); 
+ }
+
+
+ .arrowRight__background {
+	position: absolute;
+	width: 7vw;
+	height: 100%;
+	top: -5px;
+	background: linear-gradient(to left, rgb(27, 26, 26), rgba(0, 0, 0, 0)); 
+	right: 0;
  }

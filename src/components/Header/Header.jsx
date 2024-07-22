@@ -16,6 +16,7 @@ export const Header = () => {
 				<li className={s.header__navItem}>Отзывы</li>
 				<li className={s.header__navItem}>Блог</li>
 				<li className={s.header__navItem}>О нас</li>
+				<li className={s.header__navItem}>Контакты</li>
 			</ul>
 			<div className={s.header__navSocialList}>
 				<img className={s.header__navSocialListItem} src={VB} alt="ViberLogo" />

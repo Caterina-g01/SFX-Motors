@@ -3,9 +3,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import s from './styles.module.scss';
-import imgOne from '../../assets/imgs/1.jpg';
-import imgTwo from '../../assets/imgs/2.jpg';
-import imgThree from '../../assets/imgs/3.jpg';
+import imgOne from '../../assets/imgs/1.jpeg';
+import imgTwo from '../../assets/imgs/2.jpeg';
+import imgThree from '../../assets/imgs/3.jpeg';
+import arrowRight from '../../assets/imgs/arrow-right.png';
+import arrowLeft from '../../assets/imgs/arrow-left.png';
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -14,7 +16,9 @@ function NextArrow(props) {
       className={`${className} ${s.nextArrow}`}
       style={{ ...style }}
       onClick={onClick}
-    />
+    >
+      <img src={arrowRight} alt="Next" className={s.arrowImg} />
+    </div>
   );
 }
 
@@ -25,7 +29,9 @@ function PrevArrow(props) {
       className={`${className} ${s.prevArrow}`}
       style={{ ...style }}
       onClick={onClick}
-    />
+    >
+      <img src={arrowLeft} alt="Prev" className={s.arrowImg} />
+    </div>
   );
 }
 
@@ -34,18 +40,16 @@ function HeroSlider() {
   const [slideIndex, setSlideIndex] = useState(0);
   const sliderRef = useRef(null);
   const intervalRef = useRef(null);
-  const duration = 5000; 
+  const duration = 5000;
 
   const startProgressTimer = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
 
-    // Set a new interval
     intervalRef.current = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          // Move to the next slide and reset progress
           if (sliderRef.current) {
             sliderRef.current.slickNext();
           }
@@ -53,7 +57,7 @@ function HeroSlider() {
         }
         return prev + (100 / (duration / 50));
       });
-    }, 50); 
+    }, 50);
   };
 
   const resetProgress = () => {
@@ -64,7 +68,7 @@ function HeroSlider() {
   useEffect(() => {
     startProgressTimer();
     return () => {
-      clearInterval(intervalRef.current); 
+      clearInterval(intervalRef.current);
     };
   }, [slideIndex]);
 
@@ -81,7 +85,7 @@ function HeroSlider() {
     prevArrow: <PrevArrow />,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false, 
+    autoplay: false,
     beforeChange: (oldIndex, newIndex) => {
       setSlideIndex(newIndex);
     },
@@ -115,6 +119,8 @@ function HeroSlider() {
           style={{ transform: `scaleX(${progress / 100})` }}
         />
       </div>
+		<div className={s.arrowLeft__background}></div>
+		<div className={s.arrowRight__background}></div>
     </div>
   );
 }

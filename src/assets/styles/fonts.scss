@@ -10,7 +10,7 @@
  
  // H1
  @mixin fontTitle1() {
-	@include fira-sans-extra-condense(32px, 600, 120%);
+	@include fira-sans-extra-condense(24px, 600, 120%);
 	text-transform: uppercase;
 	color: $mainWhite;
  }
