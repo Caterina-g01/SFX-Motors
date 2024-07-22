@@ -7,7 +7,8 @@ import VB from '../../assets/imgs/social/viber.png';
 export const Header = () => {
 	return <div className={s.header__container}>
 		<div className={s.header__nav}>
-			<img  className={s.header__logo} src={Logo} alt="Logo" />
+			<div className={s.header__blockLogo}><img className={s.header__logo} src={Logo} alt="Logo" /></div>
+			
 			<ul className={s.header__navList}>
 				<li className={s.header__navItem}>Техника</li>
 				<li className={s.header__navItem}>Партнёры</li>
