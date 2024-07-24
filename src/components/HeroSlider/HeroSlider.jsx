@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Slider from 'react-slick';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 import s from './styles.module.scss';
+import cn from 'classnames';
 import imgOne from '../../assets/imgs/1.jpeg';
 import imgTwo from '../../assets/imgs/2.jpeg';
 import imgThree from '../../assets/imgs/3.jpeg';
@@ -99,18 +101,23 @@ function HeroSlider() {
       >
         <div className={s.slide}>
           <img className={s.sliderImg} src={imgOne} alt="Slide 1" />
+          <p className={s.sliderText} >MV Agusta Dragster 800 RR</p>
         </div>
         <div className={s.slide}>
           <img className={s.sliderImg} src={imgTwo} alt="Slide 2" />
+			 <p className={s.sliderText} >MV Agusta Dragster 800 RR</p>
         </div>
         <div className={s.slide}>
           <img className={s.sliderImg} src={imgThree} alt="Slide 3" />
+			 <p className={s.sliderText} >MV Agusta Dragster 800 RR</p>
         </div>
         <div className={s.slide}>
           <img className={s.sliderImg} src={imgOne} alt="Slide 4" />
+			 <p className={s.sliderText} >MV Agusta Dragster 800 RR</p>
         </div>
         <div className={s.slide}>
           <img className={s.sliderImg} src={imgTwo} alt="Slide 5" />
+			 <p className={s.sliderText} >MV Agusta Dragster 800 RR</p>
         </div>
       </Slider>
       <div className={s.progressBarContainer}>
@@ -119,8 +126,8 @@ function HeroSlider() {
           style={{ transform: `scaleX(${progress / 100})` }}
         />
       </div>
-		<div className={s.arrowLeft__background}></div>
-		<div className={s.arrowRight__background}></div>
+      <div className={s.arrowLeft__background}></div>
+      <div className={s.arrowRight__background}></div>
     </div>
   );
 }

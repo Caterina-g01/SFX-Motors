@@ -1,0 +1,1 @@
+export { default as InStock } from './InStock';

@@ -10,18 +10,18 @@ export const Header = () => {
 			<div className={s.header__blockLogo}><img className={s.header__logo} src={Logo} alt="Logo" /></div>
 			
 			<ul className={s.header__navList}>
-				<li className={s.header__navItem}>Техника</li>
-				<li className={s.header__navItem}>Партнёры</li>
-				<li className={s.header__navItem}>Тюнинг</li>
-				<li className={s.header__navItem}>Отзывы</li>
-				<li className={s.header__navItem}>Блог</li>
-				<li className={s.header__navItem}>О нас</li>
-				<li className={s.header__navItem}>Контакты</li>
+				<li><a className={s.header__navItem} href="">Техника</a></li>
+				<li><a className={s.header__navItem} href="">Партнёры</a></li>
+				<li><a className={s.header__navItem} href="">Тюнинг</a></li>
+				<li><a className={s.header__navItem} href="">Отзывы</a></li>
+				<li><a className={s.header__navItem} href="">Блог</a></li>
+				<li><a className={s.header__navItem} href="">О нас</a></li>
+				<li><a className={s.header__navItem} href="">Контакты</a></li>
 			</ul>
 			<div className={s.header__navSocialList}>
-				<img className={s.header__navSocialListItem} src={VB} alt="ViberLogo" />
-				<img className={s.header__navSocialListItem} src={TG} alt="TelegramLogo" />
-				<img className={s.header__navSocialListItem} src={WA} alt="WhatsAppLogo" />
+			<a href=""><img className={s.header__navSocialListItem} src={VB} alt="ViberLogo" /></a>
+			<a href=""><img className={s.header__navSocialListItem} src={TG} alt="TelegramLogo" /></a>
+			<a href=""><img className={s.header__navSocialListItem} src={WA} alt="WhatsAppLogo" /></a>
 			</div>
 			
 		</div>
