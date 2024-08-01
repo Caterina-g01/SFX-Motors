@@ -7,7 +7,6 @@
   line-height: $line-height;
 }
 
-// H1
 @mixin fontTitle1() {
   @include fira-sans-extra-condense(24px, 600, 120%);
   text-transform: uppercase;
@@ -19,3 +18,9 @@
 	text-transform: uppercase;
 	color: $mainWhite;
  }
+
+ @mixin fontTitle3() {
+  @include fira-sans-extra-condense(24px, 600, 120%);
+  text-transform: uppercase;
+  color: $mainDark;
+}

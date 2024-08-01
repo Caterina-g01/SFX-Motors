@@ -14,17 +14,26 @@ function Catalog() {
   return (
     <div className={s.catalogContainer}>
       <div className={s.catalogButtons}>
-        <CatalogButton
+      <CatalogButton
           onClick={handleClick(0)}
-          className={s.catalogButton}
+          className={`${s.catalogButton} ${selectedSection === 0 ? s.active : ''}`}
         >
-          В наличии
+          Техника&nbsp;
+          <span className={`${s.catalogButtonUnderline} ${selectedSection === 0 ? s.active : ''}`}>
+            В наличии
+          </span>
         </CatalogButton>
+
+        <div className={s.catalogButtonsDivisor}></div>
+
         <CatalogButton
           onClick={handleClick(1)}
-          className={s.catalogButton}
+          className={`${s.catalogButton} ${selectedSection === 1 ? s.active : ''}`}
         >
+          <span className={`${s.catalogButtonUnderline} ${selectedSection === 1 ? s.active : ''}`}>
           В пути
+          </span>
+          
         </CatalogButton>
       </div>
       <div className={s.catalogContent}>
