@@ -104,7 +104,6 @@ function NextArrow(props) {
           <img className={s.sliderImg} src={imgOne} alt="Slide 1" />
           <p className={s.sliderText} >MV Agusta Dragster 800 RR</p>
         </div>
-			
 			</Slider>
 		 </div>
 	  );

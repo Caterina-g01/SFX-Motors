@@ -36,11 +36,6 @@
   margin: 0;
 }
 
-.header__navItem {
-	cursor: pointer;
-	color: $mainWhite;
-}
-
 .header__navItem:hover {
 	color: $onHover;
 }
@@ -50,9 +45,4 @@
   flex-direction: column;
   gap: 3px;
   justify-content: center;
-}
-
-.header__navSocialListItem {
-  width: 25px;
-  cursor: pointer;
 }
