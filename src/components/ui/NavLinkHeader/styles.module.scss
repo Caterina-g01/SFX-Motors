@@ -1,4 +1,7 @@
 .header__navItem {
 	cursor: pointer;
 	color: $mainWhite;
+&:hover {
+	color: $onHover;
+}
 }

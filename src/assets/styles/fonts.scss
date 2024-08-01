@@ -24,3 +24,14 @@
   text-transform: uppercase;
   color: $mainDark;
 }
+
+@mixin fontTitle4() {
+  @include fira-sans-extra-condense(34px, 600, 120%);
+  color: $mainDark;
+}
+
+@mixin fontTitle5() {
+	@include fira-sans-extra-condense(44px, 600, 120%);
+	text-transform: uppercase;
+	color: $mainDark;
+ }

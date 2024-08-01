@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import s from "./styles.module.scss";
 import { CatalogButton } from "../CatalogButton/CatalogButton";
 import { InStock } from "../InStock";
 
-function Catalog() {
+function Catalog({ isVisible }) {
   const [selectedSection, setSelectedSection] = useState(0);
 
   const handleClick = (section) => (event) => {
@@ -12,9 +12,9 @@ function Catalog() {
   };
 
   return (
-    <div className={s.catalogContainer}>
+    <div className={`${s.catalogContainer} ${isVisible ? s.visible : ''}`}>
       <div className={s.catalogButtons}>
-      <CatalogButton
+        <CatalogButton
           onClick={handleClick(0)}
           className={`${s.catalogButton} ${selectedSection === 0 ? s.active : ''}`}
         >
@@ -31,9 +31,8 @@ function Catalog() {
           className={`${s.catalogButton} ${selectedSection === 1 ? s.active : ''}`}
         >
           <span className={`${s.catalogButtonUnderline} ${selectedSection === 1 ? s.active : ''}`}>
-          В пути
+            В пути
           </span>
-          
         </CatalogButton>
       </div>
       <div className={s.catalogContent}>
@@ -48,5 +47,3 @@ function Catalog() {
 }
 
 export default Catalog;
-
-
