@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import s from './styles.module.scss';
 import Logo from '../../assets/imgs/SFXMotorsLogo.png';
 import TG from '../../assets/imgs/social/telegram.png';
@@ -7,7 +7,7 @@ import VB from '../../assets/imgs/social/viber.png';
 import NavLinkHeader from '../ui/NavLinkHeader/NavLinkHeader';
 import SocialLinkHeader from '../ui/SocialLinkHeader/SocialLinkHeader';
 
-export const Header = ({ onCatalogScroll, onPartnersScroll, onTuningSliderScroll }) => {
+export const Header = ({ onCatalogScroll, onPartnersScroll, onTuningSliderScroll, onContactsScroll }) => {
   return (
     <div className={s.header__container}>
       <div className={s.header__nav}>
@@ -22,13 +22,31 @@ export const Header = ({ onCatalogScroll, onPartnersScroll, onTuningSliderScroll
           <NavLinkHeader href="#">Отзывы</NavLinkHeader>
           <NavLinkHeader href="#">Блог</NavLinkHeader>
           <NavLinkHeader href="#">О нас</NavLinkHeader>
-          <NavLinkHeader href="#">Контакты</NavLinkHeader>
+          <NavLinkHeader href="#" onClick={onContactsScroll}>Контакты</NavLinkHeader>
         </ul>
         
         <div className={s.header__navSocialList}>
-          <SocialLinkHeader href="" src={VB} alt="ViberLogo" />
-          <SocialLinkHeader href="" src={TG} alt="TelegramLogo" />
-          <SocialLinkHeader href="" src={WA} alt="WhatsAppLogo" />
+          <SocialLinkHeader
+            href=""
+            src={VB}
+            alt="ViberLogo"
+            width="30vw"
+            height="30vw"
+          />
+          <SocialLinkHeader
+            href=""
+            src={TG}
+            alt="TelegramLogo"
+            width="30vw"
+            height="30vw"
+          />
+          <SocialLinkHeader
+            href=""
+            src={WA}
+            alt="WhatsAppLogo"
+            width="30vw"
+            height="30vw"
+          />
         </div>
       </div>
     </div>

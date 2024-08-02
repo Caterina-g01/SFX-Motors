@@ -10,9 +10,11 @@ export const MainPage = () => {
   const catalogRef = useRef(null);
   const partnersRef = useRef(null);
   const tuningSliderRef = useRef(null); 
+  const contactsRef = useRef(null); 
   const [catalogVisible, setCatalogVisible] = useState(false);
   const [partnersVisible, setPartnersVisible] = useState(false);
   const [tuningSliderVisible, setTuningSliderVisible] = useState(false); 
+  const [contactsVisible, setContactsVisible] = useState(false); 
 
   const scrollToCatalog = (event) => {
     event.preventDefault();
@@ -35,6 +37,13 @@ export const MainPage = () => {
     }
   };
 
+  const scrollToContacts = (event) => { 
+    event.preventDefault();
+    if (contactsRef.current) {
+      contactsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleScroll = () => {
     const windowHeight = window.innerHeight;
     
@@ -52,6 +61,11 @@ export const MainPage = () => {
       const rect = tuningSliderRef.current.getBoundingClientRect();
       setTuningSliderVisible(rect.top < windowHeight && rect.bottom > 0);
     }
+
+    if (contactsRef.current) { // Добавлено для контактов
+      const rect = contactsRef.current.getBoundingClientRect();
+      setContactsVisible(rect.top < windowHeight && rect.bottom > 0);
+    }
   };
 
   useEffect(() => {
@@ -65,6 +79,7 @@ export const MainPage = () => {
         onCatalogScroll={scrollToCatalog} 
         onPartnersScroll={scrollToPartners} 
         onTuningSliderScroll={scrollToTuningSlider} 
+        onContactsScroll={scrollToContacts} 
       />
       <HeroSlider />
       <div ref={catalogRef}>
@@ -76,9 +91,12 @@ export const MainPage = () => {
       <div ref={tuningSliderRef}>
         <TuningSlider isVisible={tuningSliderVisible} /> 
       </div>
-      <Contacts />
+      <div ref={contactsRef}>
+        <Contacts isVisible={contactsVisible} />
+      </div>
     </>
   );
 };
 
 export default MainPage;
+

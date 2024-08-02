@@ -4,19 +4,32 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
     @include fontTitle1();
-    padding: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 .contactsContactsSection {
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 4vw;
 }
 .contactsContacts {
     display: flex;
     flex-direction: column;
+    gap: 1vw;
 
+}
+
+.contactsContactsNumbers {
+
+}
+
+.contactsContactsNumberLink{
+    @include fontTitle1();
+    text-decoration: none;
 }
 .contactsContactsLogos{
     display: flex;
@@ -30,13 +43,21 @@
 }
 .contactsContactsSocial {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
     gap: 2vw;
 }          
+
+.contactsContactsSocialLogos{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2vw;
+}
 .contactsVideoSection {
-
-
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .contactsYouTube {
-
+width: fit-content;
+height: auto;
 }
