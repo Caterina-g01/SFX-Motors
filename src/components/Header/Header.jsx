@@ -7,7 +7,7 @@ import VB from '../../assets/imgs/social/viber.png';
 import NavLinkHeader from '../ui/NavLinkHeader/NavLinkHeader';
 import SocialLinkHeader from '../ui/SocialLinkHeader/SocialLinkHeader';
 
-export const Header = ({ onCatalogScroll, onPartnersScroll }) => {
+export const Header = ({ onCatalogScroll, onPartnersScroll, onTuningSliderScroll }) => {
   return (
     <div className={s.header__container}>
       <div className={s.header__nav}>
@@ -18,7 +18,7 @@ export const Header = ({ onCatalogScroll, onPartnersScroll }) => {
         <ul className={s.header__navList}>
           <NavLinkHeader href="#" onClick={onCatalogScroll}>Техника</NavLinkHeader>
           <NavLinkHeader href="#" onClick={onPartnersScroll}>Партнёры</NavLinkHeader>
-          <NavLinkHeader href="#">Тюнинг</NavLinkHeader>
+          <NavLinkHeader href="#" onClick={onTuningSliderScroll}>Тюнинг</NavLinkHeader>
           <NavLinkHeader href="#">Отзывы</NavLinkHeader>
           <NavLinkHeader href="#">Блог</NavLinkHeader>
           <NavLinkHeader href="#">О нас</NavLinkHeader>

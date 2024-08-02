@@ -23,7 +23,7 @@
  
  .progressBar {
 	height: 100%;
-	background-color: rgb(189, 0, 0);
+	background-color: $red;
 	transform-origin: center;
 	transition: transform 0.1s linear;
  }
