@@ -57,6 +57,7 @@ function Contacts({ isVisible }) {
             <div className={s.contactsContactsMessangers}>
               <SocialLinkHeader
                 href=""
+                className={s.logoImg}
                 src={VB}
                 alt="ViberLogo"
                 width="50vw"
@@ -64,6 +65,7 @@ function Contacts({ isVisible }) {
               />
               <SocialLinkHeader
                 href=""
+                className={s.logoImg}
                 src={TG}
                 alt="TelegramLogo"
                 width="50vw"
@@ -71,6 +73,7 @@ function Contacts({ isVisible }) {
               />
               <SocialLinkHeader
                 href=""
+                className={s.logoImg}
                 src={WA}
                 alt="WhatsAppLogo"
                 width="50vw"
@@ -85,6 +88,7 @@ function Contacts({ isVisible }) {
           <div className={s.contactsContactsSocialLogos}>
             <SocialLinkHeader
               href="https://www.youtube.com/@sfxmotors"
+              className={s.logoImg}
               src={YT}
               alt="YouTubeLogo"
               width="50vw"
@@ -92,6 +96,7 @@ function Contacts({ isVisible }) {
             />
             <SocialLinkHeader
               href="https://www.instagram.com/sfxmotors/"
+              className={s.logoImg}
               src={INST}
               alt="InstagramLogo"
               width="50vw"
@@ -99,6 +104,7 @@ function Contacts({ isVisible }) {
             />
             <SocialLinkHeader
               href=""
+              className={s.logoImg}
               src={VK}
               alt="VKLogo"
               width="50vw"

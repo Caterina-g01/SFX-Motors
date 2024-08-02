@@ -70,3 +70,12 @@
 width: fit-content;
 height: auto;
 }
+
+.logoImg {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 1; 
+      }
+}

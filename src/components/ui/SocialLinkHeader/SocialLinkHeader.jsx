@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './styles.module.scss';
+import classNames from 'classnames';
 
-const SocialLinkHeader = ({ href, src, alt, width, height }) => {
+const SocialLinkHeader = ({ href, className, src, alt, width, height }) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
       <img
-        className={s.header__navSocialListItem}
+        className={className}
         src={src}
         alt={alt}
         width={width}

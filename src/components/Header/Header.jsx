@@ -28,24 +28,27 @@ export const Header = ({ onCatalogScroll, onPartnersScroll, onTuningSliderScroll
         <div className={s.header__navSocialList}>
           <SocialLinkHeader
             href=""
+			className={s.logoImg}
             src={VB}
             alt="ViberLogo"
-            width="30vw"
-            height="30vw"
+            width="25vw"
+            height="25vw"
           />
           <SocialLinkHeader
             href=""
+			className={s.logoImg}
             src={TG}
             alt="TelegramLogo"
-            width="30vw"
-            height="30vw"
+            width="25vw"
+            height="25vw"
           />
           <SocialLinkHeader
             href=""
+			className={s.logoImg}
             src={WA}
             alt="WhatsAppLogo"
-            width="30vw"
-            height="30vw"
+            width="25vw"
+            height="25vw"
           />
         </div>
       </div>
