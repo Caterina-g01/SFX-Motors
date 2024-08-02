@@ -5,11 +5,13 @@
     flex-wrap: nowrap;
     justify-content: center;
     @include fontTitle1();
+    padding: 2vw;
 }
 .contactsContactsSection {
     width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .contactsContacts {
     display: flex;

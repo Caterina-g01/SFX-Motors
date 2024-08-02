@@ -33,9 +33,16 @@ function Contacts({ isVisible }) {
             </div>
             <div className={s.contactsVideoSection}>
     <div className={s.contactsYouTube}>
-        <iframe width="762" height="430" src="https://www.youtube.com/embed/sejWzQgF9zY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe
+            src="https://www.youtube.com/embed/sejWzQgF9zY"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style={{ width: "55vw", height: "31vw" }}
+        ></iframe>
     </div>
 </div>
+
 
         </div>
     )
