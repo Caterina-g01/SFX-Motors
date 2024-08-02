@@ -4,6 +4,7 @@ import Catalog from "../../components/Catalog/Catalog";
 import Partners from '../../components/Partners/Partners';
 import TuningSlider from '../../components/TuningSlider/TuningSlider';
 import { HeroSlider } from '../../components/HeroSlider'; 
+import Contacts from '../../components/Contacts/Contacts';
 
 export const MainPage = () => {
   const catalogRef = useRef(null);
@@ -75,6 +76,7 @@ export const MainPage = () => {
       <div ref={tuningSliderRef}>
         <TuningSlider isVisible={tuningSliderVisible} /> 
       </div>
+      <Contacts />
     </>
   );
 };
